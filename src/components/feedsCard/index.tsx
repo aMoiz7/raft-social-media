@@ -27,6 +27,8 @@ const Card = ({ refetchTrigger }: { refetchTrigger: number }) => {
   const [following, setFollowing] = useState<string[]>([]);
   const { user } = useUser();
 
+ 
+
   const currentUserId = user?.sub || "";
 
   const { data, loading, error, refetch } = useQuery(GET_POSTS_QUERY, {
@@ -88,7 +90,7 @@ const Card = ({ refetchTrigger }: { refetchTrigger: number }) => {
 
   return (
     <div className="h-screen overflow-x-auto no-scrollbar pb-10">
-      {posts.map((post:Post) => (
+      {posts.map((post: Post) => (
         <div
           key={post.id}
           className="relative flex flex-col md:flex-row w-[70rem] my-6 pr-10 shadow-lg border-b border-slate-700 h-64 p-5"
@@ -109,7 +111,7 @@ const Card = ({ refetchTrigger }: { refetchTrigger: number }) => {
             </p>
             <div className="flex items-end h-10 justify-between w-full">
               <div className="flex text-gray-400">
-                <User /> <p>{post.username}</p>
+                <User /> <p>{user?.name}</p>
               </div>
               {post.user_id !== currentUserId && currentUserId && (
                 <div className="flex">
