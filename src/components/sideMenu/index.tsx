@@ -232,7 +232,7 @@ const Sidebar = ({ triggerRefetch }: SidebarProps) => {
                 }}
                 isClearable
                 placeholder="Add a mention"
-                className="bg-zinc-600 text-gray-300"
+                className="bg-zinc-600  text-gray-300"
               />
             </div>
 

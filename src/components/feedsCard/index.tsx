@@ -111,7 +111,7 @@ const Card = ({ refetchTrigger }: { refetchTrigger: number }) => {
             </p>
             <div className="flex items-end h-10 justify-between w-full">
               <div className="flex text-gray-400">
-                <User /> <p>{user?.name}</p>
+                <User /> <p>User Id : {post.user_id.slice(10,20)}</p>
               </div>
               {post.user_id !== currentUserId && currentUserId && (
                 <div className="flex">

@@ -22,12 +22,12 @@ export const CustomStyles: StylesConfig<Option, false> = {
     backgroundColor: state.isDisabled
       ? "transparent" // Transparent for disabled options
       : state.isFocused
-      ? "rgba(240, 240, 240, 1)" // Light blue on focus
-      : "transparent", // Default transparent background
+      ? "rgba(242, 242, 242, 1)" // Light blue on focus
+      : "gray", // Default transparent background
     color: state.isDisabled ? "gray" : "black", // Text color based on disabled state
     cursor: state.isDisabled ? "not-allowed" : "pointer", // Pointer behavior
     padding: 5,
-    borderRadius:10,
+    borderRadius:3,
 
   }),
   control: (provided) => ({
